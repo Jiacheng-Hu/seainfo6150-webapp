@@ -1,30 +1,27 @@
 import React from "react";
-import PropTypes from "prop-types";
-import ArticleListItem from "../ArticleListItem/ArticleListItem.jsx";
+import ArticleListItem from "../ArticleListItem/ArticleListItem";
+import styles from "./ArticleList.module.css"
 
 const ArticleList = (props) => {
-  let displayContent;
+    let displayContent;
+    if(props.articles.length) {
+        displayContent = (
 
-  if (props.articles.length) {
-    displayContent = (
-      <ul>
-        {props.articles.map((article) => (
-          <ArticleListItem article={article} key={article.slug} />
-        ))}
-      </ul>
-    );
-  } else {
-    displayContent = <div>You have no data!</div>;
-  }
+            <div className={styles.container}>
+                {props.articles.map((item) => (
+                        <ArticleListItem article={item} key={item.slug}/>
+                    ))}
+            </div>
+        )
+    } else {
+        displayContent = <div>You have no data!</div>
+    }
 
-  return (
-    <div>
-      {displayContent}
-    </div>
-  );
+    return props.articles.length ? (
+        <div>
+            {displayContent}
+        </div>
+    ) : null;
 };
 
-ArticleList.propTypes = {
-    articles: PropTypes.array.isRequired
-}
 export default ArticleList;
