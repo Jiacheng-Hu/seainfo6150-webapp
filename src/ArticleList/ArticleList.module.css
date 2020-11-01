@@ -1,8 +1,11 @@
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     flex-direction: column;
-    background-color: grey;
+    background-color: #808080;
     box-shadow: 0 0 5px 5px rgba(255, 0, 0, 0.5);
-    margin: 15px;
-    border-radius: 20px;
+    margin: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
 }
