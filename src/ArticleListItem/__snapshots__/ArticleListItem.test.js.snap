@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleListItem tests renders correctly 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="title"
+    >
+      You can take a pie on a plane
+    </div>
+    <button
+      class="button"
+    >
+      Show more
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ArticleListItem tests renders correctly after button is clicked 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="title"
+    >
+      You can take a pie on a plane
+    </div>
+    <div>
+      <p
+        class="shortText"
+      >
+        Getting excited to eat your mother's roast turkey, your uncle's stuffing and your sister's famous green bean casserole?
+      </p>
+      <time
+        class="time"
+      >
+        November 21st 2018, 2:57 pm
+      </time>
+    </div>
+    <button
+      class="button"
+    >
+      Show less
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ArticleListItem tests renders correctly after button is clicked 2`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="title"
+    >
+      You can take a pie on a plane
+    </div>
+    <button
+      class="button"
+    >
+      Show more
+    </button>
+  </div>
+</div>
+`;
