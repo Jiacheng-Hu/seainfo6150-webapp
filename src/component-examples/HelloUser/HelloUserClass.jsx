@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { bind } from 'lodash';
 
-class HelloUserClass extends Component {
+class HelloUserClass extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       greeting: "Greetings",
       numClicks: 0
     };
-    this.buttonWasClicked = this.buttonWasClicked.bind(this);
+    // this.buttonWasClicked = this.buttonWasClicked.bind(this);
   }
 
   buttonWasClicked() {
@@ -21,7 +22,7 @@ class HelloUserClass extends Component {
     return (
       <section>
         <header>HelloUserClass component</header>
-        <button onClick={this.buttonWasClicked}>
+        <button onClick={this.buttonWasClicked.bind(this)}>
           {this.props.user.name}
         </button>
       </section>
