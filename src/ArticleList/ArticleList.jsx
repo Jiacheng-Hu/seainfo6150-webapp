@@ -1,5 +1,6 @@
 import React from "react";
 import ArticleListItem from "../ArticleListItem/ArticleListItem";
+import PropTypes from "prop-types";
 
 const ArticleList = props => {
 	let content;
@@ -18,6 +19,16 @@ const ArticleList = props => {
 	return props.articles.length ? (
 		<div>{content}</div>
 	) : null;
+};
+
+ArticleList.propTypes = {
+	articles: PropTypes.arrayOf(
+		PropTypes.shape({
+			title: PropTypes.string.isRequired,
+			displayDate: PropTypes.string.isRequired,
+			shortText: PropTypes.string.isRequired
+		})
+	).isRequired
 };
 
 export default ArticleList;

@@ -5,7 +5,7 @@ const ArticleListItem = props => {
 	return (
 		<li>
 			<h3>{props.article.title}</h3>
-			<time datetime={props.article.timeStamp}>{props.article.displayDate}</time>
+			<time dateTime={props.article.timeStamp}>{props.article.displayDate}</time>
 			<p>{props.article.shortText}</p>
 		</li>
 	);
