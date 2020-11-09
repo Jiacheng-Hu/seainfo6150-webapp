@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const ArticleListItem = props => {
 	return (
-		<li key={props.article.slug}>
+		<li>
 			<h3>{props.article.title}</h3>
 			<time datetime={props.article.timeStamp}>{props.article.displayDate}</time>
 			<p>{props.article.shortText}</p>
