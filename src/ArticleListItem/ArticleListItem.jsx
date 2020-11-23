@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ArticleTextToggleButton from "../ArticleTextToggleButton/ArticleTextToggleButton";
+import ArticleImage from "../ArticleImage/ArticleImage";
 import styles from "./ArticleListItem.module.css"
 
 const ArticleListItem = (props) => {
@@ -14,6 +15,7 @@ const ArticleListItem = (props) => {
     }
     return (
         <div className={styles.container}>
+                <ArticleImage url = {props.article.image._url} title = {props.article.title}/>
                 <div className={styles.title}>{props.article.title}</div>
             {
             buttonText === "Show less" ?
